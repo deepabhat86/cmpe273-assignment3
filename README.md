@@ -13,11 +13,15 @@ k = (m/n) * lg(2)
 (reference: https://en.wikipedia.org/wiki/Bloom_filter#Optimal_number_of_hash_functions)
 
 With a false positive probability of 5 percent:
+
 Bit Array Size: 6235224
+
 Hash count: 4
 
 With a false positive probability of 10 percent:
+
 Bit Array Size: 4792529
+
 Hash count: 3
 
 
@@ -75,9 +79,6 @@ This is_member() function checks whether a given key is in the membership or not
 
 On the client side, the GET and DELETE will invoke is_member(key) function first prior to calling the servers while the PUT and DELETE will call add(key) function to update the membership.
 
-Answer the following question:
-
-* What are the best _k_ hashes and _m_ bits values to store one million _n_ keys (E.g. e52f43cd2c23bb2e6296153748382764) suppose we use the same MD5 hash key from [pickle_hash.py](https://github.com/sithu/cmpe273-spring20/blob/master/midterm/pickle_hash.py#L14) and explain why?
 
 ```python
 @lru_cache(5)
