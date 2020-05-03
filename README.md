@@ -3,26 +3,26 @@ Answer the following question:
 * What are the best _k_ hashes and _m_ bits values to store one million _n_ keys (E.g. e52f43cd2c23bb2e6296153748382764) suppose we use the same MD5 hash key from [pickle_hash.py](https://github.com/sithu/cmpe273-spring20/blob/master/midterm/pickle_hash.py#L14) and explain why?
 
 * Ans:
-There is another parameter we have to consider which is the false probability.  
+There is another parameter we have to consider which is the false positive probability.  
 The size of bit array (m) using following formula , n is the number of items to be stored, p is the false positive probability
 (reference: https://en.wikipedia.org/wiki/Bloom_filter#Avoiding_false_positives_in_a_finite_universe)
 m = -(n * lg(p)) / (lg(2)^2)
 
-the number of hash functions can be calculated using following formula where m is the size of the bit array, n is the number of items we would store in filter
+* the number of hash functions can be calculated using following formula where m is the size of the bit array, n is the number of items we would store in filter
 k = (m/n) * lg(2) 
 (reference: https://en.wikipedia.org/wiki/Bloom_filter#Optimal_number_of_hash_functions)
 
 With a false positive probability of 5 percent:
 
-Bit Array Size: 6235224
+* Bit Array Size: 6235224
 
-Hash count: 4
+* Hash count: 4
 
 With a false positive probability of 10 percent:
 
-Bit Array Size: 4792529
+* Bit Array Size: 4792529
 
-Hash count: 3
+* Hash count: 3
 
 
 # LRU Cache and Bloom Filter
