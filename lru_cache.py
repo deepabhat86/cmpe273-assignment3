@@ -16,7 +16,8 @@ class LRUCache():
         self.head = Node(0, 0) # dummy head
         self.tail = Node(0, 0) # dummy tail 
         self.head.next = self.tail 
-        self.tail.prev = self.head 
+        self.tail.prev = self.head
+        self.cursize = 0
     
     #always add node to head
     def add_node(self, node):
@@ -46,13 +47,12 @@ class LRUCache():
             new_node = Node(key,value)
             self.map[key] = new_node
             self.add_node(new_node)
-            global cursize
-            cursize += 1
+            self.cursize += 1
 
-            if cursize > self.capacity:
+            if self.cursize > self.capacity:
                 tail = self.pop_tail()
                 del self.map[tail.key]
-                cursize -= 1
+                self.cursize -= 1
         else:
             node.value = value
             self.move_to_head(node)
@@ -63,11 +63,8 @@ class LRUCache():
         node = self.map.get(key, None)
         if not node:
             return None
-
         self.move_to_head(node)
         return node.value
-
-
 
 def lru_cache(size=5):
     c = LRUCache(size)
@@ -78,10 +75,10 @@ def lru_cache(size=5):
             if args:
                 arg_list.append(', '.join(repr(arg) for arg in args))
             arg_str = ', '.join(arg_list)
-            
+
             cache_key = arg_str
             cache_result = c.get(cache_key)
-            
+
             if cache_result:
                 print("cache hit")
                 return cache_result

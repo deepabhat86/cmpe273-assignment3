@@ -6,7 +6,7 @@ from server_config import NODES
 from pickle_hash import serialize_GET, serialize_PUT, serialize_DELETE
 from node_ring import NodeRing
 from lru_cache import lru_cache
-from bloomfilter import BloomFilter
+from bloom_filter import BloomFilter
 
 bloomfilter=BloomFilter(10,.05)
 
@@ -61,7 +61,6 @@ def get(udp_clients,id):
     response = client_ring.get_node(key).send(data_bytes)
     return response
 
-@lru_cache(5)
 def put(udp_clients,obj):
     client_ring = NodeRing(udp_clients)
     global bloomfilter
@@ -70,7 +69,6 @@ def put(udp_clients,obj):
     response = client_ring.get_node(key).send(data_bytes)
     return str(response.decode())
 
-@lru_cache(5)
 def delete(udp_clients,id):
     client_ring = NodeRing(udp_clients)
     data_bytes, key = serialize_DELETE(id)
