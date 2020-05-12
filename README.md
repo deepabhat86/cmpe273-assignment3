@@ -27,6 +27,44 @@ With a false positive probability of 10 percent:
 
 # LRU Cache and Bloom Filter
 
+### For bloomfilter ,the output varies with the false positive parameter.
+if False positive - 25%
+
+output is
+```
+(base) MacBook-Pro:cmpe273-assignment3 deepav$ python3 test_bloom_filter.py
+'abound' is probably present!
+'abounds' is probably present!
+'abundance' is probably present!
+'bloom' is probably present!
+'bolster' is probably present!
+'facebook' is a false positive!
+'bonny' is probably present!
+'abundant' is probably present!
+'accessable' is probably present!
+'twitter' is definitely not present!
+'blossom' is probably present!
+'bonus' is probably present!
+```
+
+if false positive is - 5%
+```
+(base) MacBook-Pro:cmpe273-assignment3 deepav$ python3 test_bloom_filter.py
+'bolster' is probably present!
+'abounds' is probably present!
+'abundance' is probably present!
+'accessable' is probably present!
+'abound' is probably present!
+'abundant' is probably present!
+'blossom' is probably present!
+'facebook' is definitely not present!
+'twitter' is definitely not present!
+'bonny' is probably present!
+'bonus' is probably present!
+'bloom' is probably present!
+```
+
+
 
 ### Client response
 
