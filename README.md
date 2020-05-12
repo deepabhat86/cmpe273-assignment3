@@ -27,6 +27,11 @@ With a false positive probability of 10 percent:
 
 # LRU Cache and Bloom Filter
 
+
+### Client response
+
+See the output.txt for the client response on running 4 servers.
+
 The assignment 3 is based on our simple [distributed cache](https://github.com/sithu/cmpe273-spring20/tree/master/midterm) where you have implmented the GET and PUT operations.
 
 ## 1. DELETE operation
@@ -88,12 +93,6 @@ def get(key):
     else:
         return None
 ```
-
-### Client response
-
-See the output.txt for the client response on running 4 servers.
-
-
 
 
 
