@@ -89,6 +89,10 @@ def get(key):
         return None
 ```
 
+### Client response
+
+See the output.txt for the client response on running 4 servers.
+
 
 
 
