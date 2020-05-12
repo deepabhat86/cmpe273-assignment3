@@ -8,7 +8,7 @@ from node_ring import NodeRing
 from lru_cache import lru_cache
 from bloom_filter import BloomFilter
 
-bloomfilter=BloomFilter(10,.05)
+bloomfilter=BloomFilter(1000,.05)
 
 
 BUFFER_SIZE = 1024

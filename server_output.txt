@@ -1,0 +1,93 @@
+base) MacBook-Pro:cmpe273-assignment3 deepav$ python3 cache_server.py 0
+Cache Server[0] started at 127.0.0.1:4000
+('127.0.0.1', 53576):size=180
+operation=PUT
+id=1c84c3d6dec3775654c4573ca4df1064
+payload={'name': 'Bari Pushard', 'email': 'bpushard@gmail.com', 'age': 21}
+('127.0.0.1', 52364):size=82
+operation=GET
+id=1c84c3d6dec3775654c4573ca4df1064
+payload=None
+('127.0.0.1', 65360):size=85
+operation=DELETE
+id=1c84c3d6dec3775654c4573ca4df1064
+payload=None
+('127.0.0.1', 60614):size=181
+operation=PUT
+id=e52f43cd2c23bb2e6296153748382764
+payload={'name': 'Irish Rackers', 'email': 'irackers@gmail.com', 'age': 22}
+('127.0.0.1', 64472):size=82
+operation=GET
+id=e52f43cd2c23bb2e6296153748382764
+payload=None
+('127.0.0.1', 57612):size=85
+operation=DELETE
+id=e52f43cd2c23bb2e6296153748382764
+payload=None
+('127.0.0.1', 57362):size=183
+operation=PUT
+id=6aaae4a8f8468ef61e78b4ced80fa140
+payload={'name': 'Lisbeth Stacker', 'email': 'lstacker@gmail.com', 'age': 24}
+('127.0.0.1', 63645):size=82
+operation=GET
+id=6aaae4a8f8468ef61e78b4ced80fa140
+payload=None
+('127.0.0.1', 64017):size=85
+operation=DELETE
+id=6aaae4a8f8468ef61e78b4ced80fa140
+payload=None
+
+____________________________________________________________________________________________
+
+python3 cache_server.py 1
+Cache Server[1] started at 127.0.0.1:4001
+('127.0.0.1', 51965):size=176
+operation=PUT
+id=d0df71363130955e493c24ac0d296a75
+payload={'name': 'John Smith', 'email': 'jsmith@gmail.com', 'age': 20}
+('127.0.0.1', 61217):size=82
+operation=GET
+id=d0df71363130955e493c24ac0d296a75
+payload=None
+('127.0.0.1', 51884):size=85
+operation=DELETE
+id=d0df71363130955e493c24ac0d296a75
+payload=None
+('127.0.0.1', 49167):size=176
+operation=PUT
+id=d0df71363130955e493c24ac0d296a75
+payload={'name': 'John Smith', 'email': 'jsmith@gmail.com', 'age': 20}
+('127.0.0.1', 55115):size=85
+operation=DELETE
+id=d0df71363130955e493c24ac0d296a75
+payload=None
+
+____________________________________________________________________________________________
+
+(base) MacBook-Pro:cmpe273-assignment3 deepav$ python3 cache_server.py 2
+Cache Server[2] started at 127.0.0.1:4002
+
+
+____________________________________________________________________________________________
+
+
+(base) MacBook-Pro:cmpe273-assignment3 deepav$ python3 cache_server.py 3
+Cache Server[3] started at 127.0.0.1:4003
+('127.0.0.1', 50561):size=186
+operation=PUT
+id=9aa0c932fb8eba9a72a6ae60064a0507
+payload={'name': 'Agueda Letsinger', 'email': 'aletsinger@gmail.com', 'age': 23}
+('127.0.0.1', 56138):size=82
+operation=GET
+id=9aa0c932fb8eba9a72a6ae60064a0507
+payload=None
+('127.0.0.1', 57461):size=85
+operation=DELETE
+id=9aa0c932fb8eba9a72a6ae60064a0507
+payload=None
+
+
+
+
+
+
